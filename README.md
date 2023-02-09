@@ -28,8 +28,13 @@ And as part of the implementation of the command line interpreter paired with th
 ## How to start it
 These instructions will get you a copy of the project up and runnign on your local machine (Linux distro) for development and testing purposes
 
-## Installing
-You will need to clone the repository of the project from Github. This will contain the simple shell program and all of its dependencies.
+## Installion
+clone the repository and run the console.py
 ```
 $ git clone https://github.com/------/AirBnB_clone.git
 ```
+
+## Usage
+|**Method**|**Description**|
+|----------|---------------|
+|[create](./console.py)|Creates object of given class|
