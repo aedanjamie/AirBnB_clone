@@ -36,5 +36,5 @@ $ git clone https://github.com/------/AirBnB_clone.git
 
 ## Usage
 |**Method**|**Description**|
-|----------|---------------|
-|[create](./console.py)|Creates object of given class|
+| ---------- | --------------- |
+| [create](./console.py) | Creates object of given class |
