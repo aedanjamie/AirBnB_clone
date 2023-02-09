@@ -30,6 +30,6 @@ These instructions will get you a copy of the project up and runnign on your loc
 
 ## Installing
 You will need to clone the repository of the project from Github. This will contain the simple shell program and all of its dependencies.
-'''
+```
 $ git clone https://github.com/------/AirBnB_clone.git
-'''
+```
