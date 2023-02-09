@@ -1,5 +1,5 @@
 # Group Project 0x00 - AirBnB Clone
-![AirBnB Logo] (https://www.digital.ink/wp-content/uploads/airbnb_logo_detail.jpg)
+![AirBnB Logo](https://www.digital.ink/wp-content/uploads/airbnb_logo_detail.jpg)
 
 ## Project Description
 This is the first part of the AirBnB clone Project where we will work on the backend side of the project while interfacing it with a consol application using the cmd module in python.
