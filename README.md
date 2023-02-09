@@ -24,3 +24,7 @@ And as part of the implementation of the command line interpreter paired with th
 * Doing operations on objects (count, compute stats, etc.)
 * Updating attributes of an object
 * Destroying an object
+
+## How to start it
+
+These instructions will get you a copy of the project up and runnign on your local machine (Linux distro) for development and testing purposes
