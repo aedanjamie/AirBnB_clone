@@ -2,34 +2,38 @@
 ![AirBnB Logo](https://www.digital.ink/wp-content/uploads/airbnb_logo_detail.jpg)
 
 ## Project Description
-This is the first part of the AirBnB clone Project where we will work on the backend side of the project while interfacing it with a consol application using the cmd module in python.
+This is the phase one of a four phase project, to create a basic clone of the AirBnB web app. In the first phase a basic console was created using the Cmd Python module, to manage the objects of the whole project, being able to implement the methods create, show, update, all, and destroy to the existing classes and subclasses.
 
-Data or python objects generated are stored in a json file and can be accesses using the json module in python.
+## Environment
+The console was developed in Ubuntu 20.04 LTS using python3 (version 3.8.5).
 
-##Description of the command interpreter
-The interface of the application is just like the bash shell except that this has a limited number of accepted commands that were solely defined for the purposes of the usage of the AitBnB website
+## Repo Contents
+This repository contains the following files:
 
-This command line interpreter serves as the frontend of the web application where users can interact with the backend which was developed with python OOP programming.
-
-Some of the commands available are:
-* show
-* create
-* update
-* destroy
-* count
-
-And as part of the implementation of the command line interpreter paired with the backend and file storage system, the following actions can be performed:
-* Creating new objects (e.g. A new User or a new Place)
-* Retrieving an object from a file, database, etc.
-* Doing operations on objects (count, compute stats, etc.)
-* Updating attributes of an object
-* Destroying an object
-
-## How to start it
-These instructions will get you a copy of the project up and runnign on your local machine (Linux distro) for development and testing purposes
+|   **File**   |   **Description**   |
+| -------------- | --------------------- |
+|[AUTHORS](./AUTHORS) | Contains info about authors of the project |
+|[base_model.py](./models/base_model.py) | Defines BaseModel class (parent class), and methods |
+|[user.py](./models/user.py) | Defines subclass User |
+|[amenity.py](./models/amenity.py) | Defines subclass Amenity |
+|[city.py](./models/city.py)| Defines subclass City |
+|[place.py](./models/place.py)| Defines subclass Place |
+|[review.py](./models/review.py) | Defines subclass Review |
+|[state.py](./models/state.py) | Defines subclass State |
+|[file_storage.py](./models/engine/file_storage.py) | Creates new instance of class, serializes and deserializes data |
+|[console.py](./console.py) | creates object, retrieves object from file, does operations on objects, updates attributes of object and destroys object |
+|[test_base_model.py](./tests/test_models/test_base_model.py) | unittests for base_model |
+|[test_user.py](./tests/test_models/test_user.py) | unittests for user |
+|[test_amenity.py](./tests/test_models/test_amenity.py) | unittests for amenity |
+|[test_city.py](./tests/test_models/test_city.py) | unittests for city |
+|[test_place.py](./tests/test_models/test_place.py) | unittests for place |
+|[test_review.py](./tests/test_models/test_review.py) | unittests for review |
+|[test_state.py](./tests/test_models/test_state.py) | unittests for state |
+|[test_file_storage.py](./tests/test_models/test_engine/test_file_storage.py) | unittests for file_storage |
+|[test_console.py](./tests/test_console.py) | unittests for console |
 
 ## Installion
-clone the repository and run the console.py
+Clone the repository and run the console.py
 ```
 $ git clone https://github.com/------/AirBnB_clone.git
 ```
@@ -65,4 +69,28 @@ bb4f4b81-7757-460b-9263-743c9ea6fef6
 (hbnb) show User
 ** instance id missing **
 (hbnb)
+```
+
+###### Example 2
+```
+➜  AirBnB_clone git:(feature) ✗ ./console.py
+(hbnb) User.create
+*** Unknown syntax: User.create
+(hbnb) User.create()
+e6ee5344-04ef-454d-84e4-ba6fc613f1b4
+(hbnb) User.all()
+["[User] (e6ee5344-04ef-454d-84e4-ba6fc613f1b4) {'id': 'e6ee5344-04ef-454d-84e4-ba6fc613f1b4', 'updated_at': datetime.datetime(2019, 11, 13, 17, 14, 1, 963404), 'created_at': datetime.datetime(2019, 11, 13, 17, 14, 1, 963373)}"]
+(hbnb) User.show()
+** instance id missing **
+(hbnb) User.show(e6ee5344-04ef-454d-84e4-ba6fc613f1b4)
+[User] (e6ee5344-04ef-454d-84e4-ba6fc613f1b4) {'id': 'e6ee5344-04ef-454d-84e4-ba6fc613f1b4', 'updated_at': datetime.datetime(2019, 11, 13, 17, 14, 1, 963404), 'created_at': datetime.datetime(2019, 11, 13, 17, 14, 1, 963373)}
+(hbnb) User.update("e6ee5344-04ef-454d-84e4-ba6fc613f1b4", "name", "Betty")
+['User', '"e6ee5344-04ef-454d-84e4-ba6fc613f1b4"', '"name"', '"Betty"']
+(hbnb) User.all()
+['[User] (e6ee5344-04ef-454d-84e4-ba6fc613f1b4) {\'"name"\': \'"Betty"\', \'id\': \'e6ee5344-04ef-454d-84e4-ba6fc613f1b4\', \'updated_at\': datetime.datetime(2019, 11, 13, 17, 14, 1, 963404), \'created_at\': datetime.datetime(2019, 11, 13, 17, 14, 1, 963373)}']
+(hbnb) User.destroy(e6ee5344-04ef-454d-84e4-ba6fc613f1b4)
+(hbnb) User.all()
+[]
+(hbnb) quit
+➜  AirBnB_clone git:(feature) ✗
 ```
