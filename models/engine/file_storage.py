@@ -55,7 +55,7 @@ class FileStorage:
                         for k, v in obj_dict.items()}
             # TODO: should this overwrite or insert?
             FileStorage.__objects = obj_dict
-    
+
     def attributes(self):
         """Returns the valid attributes and their types for classname"""
         attributes = {
